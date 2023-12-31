@@ -1,0 +1,660 @@
+{
+  "resources/css/app.scss": {
+    "file": "assets/app-82fae7fc.css",
+    "isEntry": true,
+    "src": "resources/css/app.scss"
+  },
+  "resources/images/all-img/404-2.svg": {
+    "file": "assets/404-2-8d175d08.svg",
+    "src": "resources/images/all-img/404-2.svg"
+  },
+  "resources/images/all-img/404.svg": {
+    "file": "assets/404-937e4e9b.svg",
+    "src": "resources/images/all-img/404.svg"
+  },
+  "resources/images/all-img/big-shap1.png": {
+    "file": "assets/big-shap1-68df6746.png",
+    "src": "resources/images/all-img/big-shap1.png"
+  },
+  "resources/images/all-img/big-shap2.png": {
+    "file": "assets/big-shap2-08206ba7.png",
+    "src": "resources/images/all-img/big-shap2.png"
+  },
+  "resources/images/all-img/big-shap3.png": {
+    "file": "assets/big-shap3-13942a2f.png",
+    "src": "resources/images/all-img/big-shap3.png"
+  },
+  "resources/images/all-img/big-shap4.png": {
+    "file": "assets/big-shap4-66fd56a9.png",
+    "src": "resources/images/all-img/big-shap4.png"
+  },
+  "resources/images/all-img/c1.png": {
+    "file": "assets/c1-09c9dee3.png",
+    "src": "resources/images/all-img/c1.png"
+  },
+  "resources/images/all-img/c2.png": {
+    "file": "assets/c2-7379f027.png",
+    "src": "resources/images/all-img/c2.png"
+  },
+  "resources/images/all-img/c3.png": {
+    "file": "assets/c3-6be0a65a.png",
+    "src": "resources/images/all-img/c3.png"
+  },
+  "resources/images/all-img/c4.png": {
+    "file": "assets/c4-111f4823.png",
+    "src": "resources/images/all-img/c4.png"
+  },
+  "resources/images/all-img/card-1.png": {
+    "file": "assets/card-1-570ad16f.png",
+    "src": "resources/images/all-img/card-1.png"
+  },
+  "resources/images/all-img/card-2.png": {
+    "file": "assets/card-2-d5596fbb.png",
+    "src": "resources/images/all-img/card-2.png"
+  },
+  "resources/images/all-img/card-3.png": {
+    "file": "assets/card-3-a205f255.png",
+    "src": "resources/images/all-img/card-3.png"
+  },
+  "resources/images/all-img/card-4.png": {
+    "file": "assets/card-4-61aa826e.png",
+    "src": "resources/images/all-img/card-4.png"
+  },
+  "resources/images/all-img/card-5.png": {
+    "file": "assets/card-5-a2f35e13.png",
+    "src": "resources/images/all-img/card-5.png"
+  },
+  "resources/images/all-img/card-6.png": {
+    "file": "assets/card-6-29783a24.png",
+    "src": "resources/images/all-img/card-6.png"
+  },
+  "resources/images/all-img/card-7.png": {
+    "file": "assets/card-7-c89e28f6.png",
+    "src": "resources/images/all-img/card-7.png"
+  },
+  "resources/images/all-img/ck.svg": {
+    "file": "assets/ck-b59ef3e7.svg",
+    "src": "resources/images/all-img/ck.svg"
+  },
+  "resources/images/all-img/cus-1.png": {
+    "file": "assets/cus-1-bf1fcabe.png",
+    "src": "resources/images/all-img/cus-1.png"
+  },
+  "resources/images/all-img/cus-2.png": {
+    "file": "assets/cus-2-343ce174.png",
+    "src": "resources/images/all-img/cus-2.png"
+  },
+  "resources/images/all-img/cus-3.png": {
+    "file": "assets/cus-3-694e17ce.png",
+    "src": "resources/images/all-img/cus-3.png"
+  },
+  "resources/images/all-img/customer_1.png": {
+    "file": "assets/customer_1-a3a664ea.png",
+    "src": "resources/images/all-img/customer_1.png"
+  },
+  "resources/images/all-img/image-1.png": {
+    "file": "assets/image-1-6cc46176.png",
+    "src": "resources/images/all-img/image-1.png"
+  },
+  "resources/images/all-img/image-2.png": {
+    "file": "assets/image-2-875f6a4f.png",
+    "src": "resources/images/all-img/image-2.png"
+  },
+  "resources/images/all-img/image-3.png": {
+    "file": "assets/image-3-31340023.png",
+    "src": "resources/images/all-img/image-3.png"
+  },
+  "resources/images/all-img/inbox-1.png": {
+    "file": "assets/inbox-1-40b781f7.png",
+    "src": "resources/images/all-img/inbox-1.png"
+  },
+  "resources/images/all-img/inbox-2.png": {
+    "file": "assets/inbox-2-dc91fa7a.png",
+    "src": "resources/images/all-img/inbox-2.png"
+  },
+  "resources/images/all-img/inbox-3.png": {
+    "file": "assets/inbox-3-a88f5cef.png",
+    "src": "resources/images/all-img/inbox-3.png"
+  },
+  "resources/images/all-img/login-bg.png": {
+    "file": "assets/login-bg-2bc23afa.png",
+    "src": "resources/images/all-img/login-bg.png"
+  },
+  "resources/images/all-img/main-user.png": {
+    "file": "assets/main-user-19429b1a.png",
+    "src": "resources/images/all-img/main-user.png"
+  },
+  "resources/images/all-img/p-1.png": {
+    "file": "assets/p-1-9e629ab9.png",
+    "src": "resources/images/all-img/p-1.png"
+  },
+  "resources/images/all-img/p-2.png": {
+    "file": "assets/p-2-f5d159b1.png",
+    "src": "resources/images/all-img/p-2.png"
+  },
+  "resources/images/all-img/p-3.png": {
+    "file": "assets/p-3-add4b90b.png",
+    "src": "resources/images/all-img/p-3.png"
+  },
+  "resources/images/all-img/p-4.png": {
+    "file": "assets/p-4-aa74dcc1.png",
+    "src": "resources/images/all-img/p-4.png"
+  },
+  "resources/images/all-img/p-5.png": {
+    "file": "assets/p-5-7f37c734.png",
+    "src": "resources/images/all-img/p-5.png"
+  },
+  "resources/images/all-img/p-6.png": {
+    "file": "assets/p-6-7f52bcd7.png",
+    "src": "resources/images/all-img/p-6.png"
+  },
+  "resources/images/all-img/page-bg.png": {
+    "file": "assets/page-bg-adc55a0b.png",
+    "src": "resources/images/all-img/page-bg.png"
+  },
+  "resources/images/all-img/post-1.png": {
+    "file": "assets/post-1-00f66532.png",
+    "src": "resources/images/all-img/post-1.png"
+  },
+  "resources/images/all-img/post-2.png": {
+    "file": "assets/post-2-c3c3db87.png",
+    "src": "resources/images/all-img/post-2.png"
+  },
+  "resources/images/all-img/shade-1.png": {
+    "file": "assets/shade-1-21980b92.png",
+    "src": "resources/images/all-img/shade-1.png"
+  },
+  "resources/images/all-img/shade-2.png": {
+    "file": "assets/shade-2-2cf963a3.png",
+    "src": "resources/images/all-img/shade-2.png"
+  },
+  "resources/images/all-img/shade-3.png": {
+    "file": "assets/shade-3-24b376b3.png",
+    "src": "resources/images/all-img/shade-3.png"
+  },
+  "resources/images/all-img/shade-4.png": {
+    "file": "assets/shade-4-ee2a1960.png",
+    "src": "resources/images/all-img/shade-4.png"
+  },
+  "resources/images/all-img/t1.png": {
+    "file": "assets/t1-02863d28.png",
+    "src": "resources/images/all-img/t1.png"
+  },
+  "resources/images/all-img/thumb-1.png": {
+    "file": "assets/thumb-1-a2aeae5f.png",
+    "src": "resources/images/all-img/thumb-1.png"
+  },
+  "resources/images/all-img/thumb-2.png": {
+    "file": "assets/thumb-2-683314e2.png",
+    "src": "resources/images/all-img/thumb-2.png"
+  },
+  "resources/images/all-img/thumb-3.png": {
+    "file": "assets/thumb-3-d6a7ad42.png",
+    "src": "resources/images/all-img/thumb-3.png"
+  },
+  "resources/images/all-img/thumb-4.png": {
+    "file": "assets/thumb-4-12b6c1e2.png",
+    "src": "resources/images/all-img/thumb-4.png"
+  },
+  "resources/images/all-img/thumb-5.png": {
+    "file": "assets/thumb-5-7c785e60.png",
+    "src": "resources/images/all-img/thumb-5.png"
+  },
+  "resources/images/all-img/thumb-6.png": {
+    "file": "assets/thumb-6-3a3d5fee.png",
+    "src": "resources/images/all-img/thumb-6.png"
+  },
+  "resources/images/all-img/user-big.png": {
+    "file": "assets/user-big-34658912.png",
+    "src": "resources/images/all-img/user-big.png"
+  },
+  "resources/images/all-img/user.png": {
+    "file": "assets/user-7c0c7ce4.png",
+    "src": "resources/images/all-img/user.png"
+  },
+  "resources/images/all-img/user2.png": {
+    "file": "assets/user2-084848b0.png",
+    "src": "resources/images/all-img/user2.png"
+  },
+  "resources/images/all-img/user3.png": {
+    "file": "assets/user3-6873be9c.png",
+    "src": "resources/images/all-img/user3.png"
+  },
+  "resources/images/all-img/user4.png": {
+    "file": "assets/user4-630952bd.png",
+    "src": "resources/images/all-img/user4.png"
+  },
+  "resources/images/all-img/video-poster.png": {
+    "file": "assets/video-poster-594dd0d8.png",
+    "src": "resources/images/all-img/video-poster.png"
+  },
+  "resources/images/all-img/visa-card-bg.png": {
+    "file": "assets/visa-card-bg-bd39bcac.png",
+    "src": "resources/images/all-img/visa-card-bg.png"
+  },
+  "resources/images/all-img/widget-bg-1.png": {
+    "file": "assets/widget-bg-1-e52f9df1.png",
+    "src": "resources/images/all-img/widget-bg-1.png"
+  },
+  "resources/images/all-img/widget-bg-2.png": {
+    "file": "assets/widget-bg-2-035e0098.png",
+    "src": "resources/images/all-img/widget-bg-2.png"
+  },
+  "resources/images/all-img/widget-bg-3-1.png": {
+    "file": "assets/widget-bg-3-1-587b24de.png",
+    "src": "resources/images/all-img/widget-bg-3-1.png"
+  },
+  "resources/images/all-img/widget-bg-3.png": {
+    "file": "assets/widget-bg-3-060a7fdc.png",
+    "src": "resources/images/all-img/widget-bg-3.png"
+  },
+  "resources/images/all-img/widget-bg-4.png": {
+    "file": "assets/widget-bg-4-4800eddc.png",
+    "src": "resources/images/all-img/widget-bg-4.png"
+  },
+  "resources/images/all-img/widget-bg-5.png": {
+    "file": "assets/widget-bg-5-c89b8339.png",
+    "src": "resources/images/all-img/widget-bg-5.png"
+  },
+  "resources/images/all-img/widget-bg-6.png": {
+    "file": "assets/widget-bg-6-77a65161.png",
+    "src": "resources/images/all-img/widget-bg-6.png"
+  },
+  "resources/images/all-img/widget-bg-7.png": {
+    "file": "assets/widget-bg-7-a9cd1189.png",
+    "src": "resources/images/all-img/widget-bg-7.png"
+  },
+  "resources/images/all-img/widget-bg-8.png": {
+    "file": "assets/widget-bg-8-c3a3c7bd.png",
+    "src": "resources/images/all-img/widget-bg-8.png"
+  },
+  "resources/images/auth/ils1.svg": {
+    "file": "assets/ils1-259a6b17.svg",
+    "src": "resources/images/auth/ils1.svg"
+  },
+  "resources/images/auth/ilst2.png": {
+    "file": "assets/ilst2-50b8bb30.png",
+    "src": "resources/images/auth/ilst2.png"
+  },
+  "resources/images/avatar/av-1.svg": {
+    "file": "assets/av-1-04e37796.svg",
+    "src": "resources/images/avatar/av-1.svg"
+  },
+  "resources/images/avatar/av-2.svg": {
+    "file": "assets/av-2-0a8e429b.svg",
+    "src": "resources/images/avatar/av-2.svg"
+  },
+  "resources/images/avatar/av-3.svg": {
+    "file": "assets/av-3-d82f8dce.svg",
+    "src": "resources/images/avatar/av-3.svg"
+  },
+  "resources/images/avatar/av-4.svg": {
+    "file": "assets/av-4-ce37dd2e.svg",
+    "src": "resources/images/avatar/av-4.svg"
+  },
+  "resources/images/avatar/av-5.svg": {
+    "file": "assets/av-5-ee937938.svg",
+    "src": "resources/images/avatar/av-5.svg"
+  },
+  "resources/images/avatar/av-6.svg": {
+    "file": "assets/av-6-9e89abc1.svg",
+    "src": "resources/images/avatar/av-6.svg"
+  },
+  "resources/images/chat/chat-1.png": {
+    "file": "assets/chat-1-f36c2025.png",
+    "src": "resources/images/chat/chat-1.png"
+  },
+  "resources/images/chat/chat-2.png": {
+    "file": "assets/chat-2-ccd6b5f4.png",
+    "src": "resources/images/chat/chat-2.png"
+  },
+  "resources/images/chat/chat-3.png": {
+    "file": "assets/chat-3-323e9a68.png",
+    "src": "resources/images/chat/chat-3.png"
+  },
+  "resources/images/chat/chat-4.png": {
+    "file": "assets/chat-4-06f86b0a.png",
+    "src": "resources/images/chat/chat-4.png"
+  },
+  "resources/images/chat/chat-5.png": {
+    "file": "assets/chat-5-746732cd.png",
+    "src": "resources/images/chat/chat-5.png"
+  },
+  "resources/images/chat/chat-6.png": {
+    "file": "assets/chat-6-e01b201f.png",
+    "src": "resources/images/chat/chat-6.png"
+  },
+  "resources/images/chat/sd1.png": {
+    "file": "assets/sd1-187e9af7.png",
+    "src": "resources/images/chat/sd1.png"
+  },
+  "resources/images/chat/sd2.png": {
+    "file": "assets/sd2-a82515b4.png",
+    "src": "resources/images/chat/sd2.png"
+  },
+  "resources/images/chat/sd3.png": {
+    "file": "assets/sd3-5568a4f9.png",
+    "src": "resources/images/chat/sd3.png"
+  },
+  "resources/images/chat/sd4.png": {
+    "file": "assets/sd4-2904e1e9.png",
+    "src": "resources/images/chat/sd4.png"
+  },
+  "resources/images/chat/sd5.png": {
+    "file": "assets/sd5-89c0faf5.png",
+    "src": "resources/images/chat/sd5.png"
+  },
+  "resources/images/chat/sd6.png": {
+    "file": "assets/sd6-f7b496d3.png",
+    "src": "resources/images/chat/sd6.png"
+  },
+  "resources/images/flags.png": {
+    "file": "assets/flags-38025784.png",
+    "src": "resources/images/flags.png"
+  },
+  "resources/images/flags/bd-.svg.png": {
+    "file": "assets/bd-.svg-f9f5fda0.png",
+    "src": "resources/images/flagss/bd-.svg.png"
+  },
+  "resources/images/flags/en.svg": {
+    "file": "assets/en-1254ce69.svg",
+    "src": "resources/images/flagss/en.svg"
+  },
+  "resources/images/flags/gn.png": {
+    "file": "assets/gn-91a6912f.png",
+    "src": "resources/images/flagss/gn.png"
+  },
+  "resources/images/flags/usa.png": {
+    "file": "assets/usa-25be2de7.png",
+    "src": "resources/images/flagss/usa.png"
+  },
+  "resources/images/flags@2x.png": {
+    "file": "assets/flags@2x-e21becc4.png",
+    "src": "resources/images/flags@2x.png"
+  },
+  "resources/images/flagss/bd-.svg.png": {
+    "file": "assets/bd-.svg-f9f5fda0.png",
+    "src": "resources/images/flagss/bd-.svg.png"
+  },
+  "resources/images/flagss/en.svg": {
+    "file": "assets/en-1254ce69.svg",
+    "src": "resources/images/flagss/en.svg"
+  },
+  "resources/images/flagss/gn.png": {
+    "file": "assets/gn-91a6912f.png",
+    "src": "resources/images/flagss/gn.png"
+  },
+  "resources/images/flagss/usa.png": {
+    "file": "assets/usa-25be2de7.png",
+    "src": "resources/images/flagss/usa.png"
+  },
+  "resources/images/icon/ck-white.svg": {
+    "file": "assets/ck-white-a80f7fec.svg",
+    "src": "resources/images/icon/ck-white.svg"
+  },
+  "resources/images/icon/crown.svg": {
+    "file": "assets/crown-8041f513.svg",
+    "src": "resources/images/icon/crown.svg"
+  },
+  "resources/images/icon/fb.svg": {
+    "file": "assets/fb-011c6dd1.svg",
+    "src": "resources/images/icon/fb.svg"
+  },
+  "resources/images/icon/file-1.svg": {
+    "file": "assets/file-1-4a0ee4bf.svg",
+    "src": "resources/images/icon/file-1.svg"
+  },
+  "resources/images/icon/github.svg": {
+    "file": "assets/github-8f87b88b.svg",
+    "src": "resources/images/icon/icons8-github.svg"
+  },
+  "resources/images/icon/gp.svg": {
+    "file": "assets/gp-9fa58808.svg",
+    "src": "resources/images/icon/gp.svg"
+  },
+  "resources/images/icon/home.svg": {
+    "file": "assets/home-e3b0c442.svg",
+    "src": "resources/images/icon/home.svg"
+  },
+  "resources/images/icon/icons8-github.svg": {
+    "file": "assets/github-8f87b88b.svg",
+    "src": "resources/images/icon/icons8-github.svg"
+  },
+  "resources/images/icon/in.svg": {
+    "file": "assets/in-9a3966ff.svg",
+    "src": "resources/images/icon/in.svg"
+  },
+  "resources/images/icon/pdf-1.svg": {
+    "file": "assets/pdf-1-f0f1a359.svg",
+    "src": "resources/images/icon/pdf-1.svg"
+  },
+  "resources/images/icon/pdf-2.svg": {
+    "file": "assets/pdf-2-5b9606b1.svg",
+    "src": "resources/images/icon/pdf-2.svg"
+  },
+  "resources/images/icon/scr-1.svg": {
+    "file": "assets/scr-1-f66fcf6b.svg",
+    "src": "resources/images/icon/scr-1.svg"
+  },
+  "resources/images/icon/success.svg": {
+    "file": "assets/success-0925f7c0.svg",
+    "src": "resources/images/icon/success.svg"
+  },
+  "resources/images/icon/tw.svg": {
+    "file": "assets/tw-a0c0a20c.svg",
+    "src": "resources/images/icon/tw.svg"
+  },
+  "resources/images/icon/white-s.svg": {
+    "file": "assets/white-s-1c405cf1.svg",
+    "src": "resources/images/icon/white-s.svg"
+  },
+  "resources/images/icon/zip-1.svg": {
+    "file": "assets/zip-1-b46fcdb3.svg",
+    "src": "resources/images/icon/zip-1.svg"
+  },
+  "resources/images/layers-2x.png": {
+    "file": "assets/layers-2x-066daca8.png",
+    "src": "resources/images/layers-2x.png"
+  },
+  "resources/images/layers.png": {
+    "file": "assets/layers-1dbbe9d0.png",
+    "src": "resources/images/layers.png"
+  },
+  "resources/images/logo/favicon.svg": {
+    "file": "assets/logo-c-74e0b2c3.svg",
+    "src": "resources/images/logo/logo-c.svg"
+  },
+  "resources/images/logo/logo-c-white.svg": {
+    "file": "assets/logo-c-white-75c08036.svg",
+    "src": "resources/images/logo/logo-c-white.svg"
+  },
+  "resources/images/logo/logo-c.svg": {
+    "file": "assets/logo-c-74e0b2c3.svg",
+    "src": "resources/images/logo/logo-c.svg"
+  },
+  "resources/images/logo/logo-white.svg": {
+    "file": "assets/logo-white-2465155e.svg",
+    "src": "resources/images/logo/logo-white.svg"
+  },
+  "resources/images/logo/logo.svg": {
+    "file": "assets/logo-5b4ce9cb.svg",
+    "src": "resources/images/logo/logo.svg"
+  },
+  "resources/images/logo/visa.svg": {
+    "file": "assets/visa-42ccf02a.svg",
+    "src": "resources/images/logo/visa.svg"
+  },
+  "resources/images/marker-icon-2x.png": {
+    "file": "assets/marker-icon-2x-00179c4c.png",
+    "src": "resources/images/marker-icon-2x.png"
+  },
+  "resources/images/marker-icon.png": {
+    "file": "assets/marker-icon-574c3a5c.png",
+    "src": "resources/images/marker-icon.png"
+  },
+  "resources/images/marker-shadow.png": {
+    "file": "assets/marker-shadow-264f5c64.png",
+    "src": "resources/images/marker-shadow.png"
+  },
+  "resources/images/post/c1.png": {
+    "file": "assets/c1-dd37fb4c.png",
+    "src": "resources/images/post/c1.png"
+  },
+  "resources/images/post/c2.png": {
+    "file": "assets/c2-8025085b.png",
+    "src": "resources/images/post/c2.png"
+  },
+  "resources/images/post/c3.png": {
+    "file": "assets/c3-7218208f.png",
+    "src": "resources/images/post/c3.png"
+  },
+  "resources/images/post/t-1.png": {
+    "file": "assets/t-1-2e55e515.png",
+    "src": "resources/images/post/t-1.png"
+  },
+  "resources/images/post/t-2.png": {
+    "file": "assets/t-2-21b49b88.png",
+    "src": "resources/images/post/t-2.png"
+  },
+  "resources/images/post/t-3.png": {
+    "file": "assets/t-3-d7767a70.png",
+    "src": "resources/images/post/t-3.png"
+  },
+  "resources/images/svg/blank.svg": {
+    "file": "assets/blank-5b559fe6.svg",
+    "src": "resources/images/svg/blank.svg"
+  },
+  "resources/images/svg/dc.svg": {
+    "file": "assets/dc-276a250d.svg",
+    "src": "resources/images/svg/dc.svg"
+  },
+  "resources/images/svg/fb.svg": {
+    "file": "assets/fb-35d6b361.svg",
+    "src": "resources/images/svg/fb.svg"
+  },
+  "resources/images/svg/gift.svg": {
+    "file": "assets/gift-dfc71952.svg",
+    "src": "resources/images/svg/gift.svg"
+  },
+  "resources/images/svg/img-1.svg": {
+    "file": "assets/img-1-9ea411b3.svg",
+    "src": "resources/images/svg/img-1.svg"
+  },
+  "resources/images/svg/img-2.svg": {
+    "file": "assets/img-2-e44a2ba9.svg",
+    "src": "resources/images/svg/img-2.svg"
+  },
+  "resources/images/svg/ins.svg": {
+    "file": "assets/ins-a273e7c6.svg",
+    "src": "resources/images/svg/ins.svg"
+  },
+  "resources/images/svg/line.svg": {
+    "file": "assets/line-30271abf.svg",
+    "src": "resources/images/svg/line.svg"
+  },
+  "resources/images/svg/ln.svg": {
+    "file": "assets/ln-788388a3.svg",
+    "src": "resources/images/svg/ln.svg"
+  },
+  "resources/images/svg/loader.svg": {
+    "file": "assets/loader-d74e932c.svg",
+    "src": "resources/images/svg/loader.svg"
+  },
+  "resources/images/svg/mobile-menu-bg.svg": {
+    "file": "assets/mobile-menu-bg-3f62fbd0.svg",
+    "src": "resources/images/svg/mobile-menu-bg.svg"
+  },
+  "resources/images/svg/path.svg": {
+    "file": "assets/path-23ef6285.svg",
+    "src": "resources/images/svg/path.svg"
+  },
+  "resources/images/svg/q.svg": {
+    "file": "assets/q-136f432c.svg",
+    "src": "resources/images/svg/q.svg"
+  },
+  "resources/images/svg/rabit.svg": {
+    "file": "assets/rabit-65d22ce6.svg",
+    "src": "resources/images/svg/rabit.svg"
+  },
+  "resources/images/svg/sk.svg": {
+    "file": "assets/sk-2fa59342.svg",
+    "src": "resources/images/svg/sk.svg"
+  },
+  "resources/images/svg/tw.svg": {
+    "file": "assets/tw-a24fda37.svg",
+    "src": "resources/images/svg/tw.svg"
+  },
+  "resources/images/svg/upload.svg": {
+    "file": "assets/upload-7ea9ffeb.svg",
+    "src": "resources/images/svg/upload.svg"
+  },
+  "resources/images/svg/widgetvector.svg": {
+    "file": "assets/widgetvector-f4a8e368.svg",
+    "src": "resources/images/svg/widgetvector.svg"
+  },
+  "resources/images/svg/widgetvector2.svg": {
+    "file": "assets/widgetvector2-a5ce8a28.svg",
+    "src": "resources/images/svg/widgetvector2.svg"
+  },
+  "resources/images/users/user-1.jpg": {
+    "file": "assets/user-1-2c140c0d.jpg",
+    "src": "resources/images/users/user-1.jpg"
+  },
+  "resources/images/users/user-2.jpg": {
+    "file": "assets/user-1-2c140c0d.jpg",
+    "src": "resources/images/users/user-1.jpg"
+  },
+  "resources/images/users/user-3.jpg": {
+    "file": "assets/user-3-0557af4f.jpg",
+    "src": "resources/images/users/user-6.jpg"
+  },
+  "resources/images/users/user-4.jpg": {
+    "file": "assets/user-4-e151a961.jpg",
+    "src": "resources/images/users/user-4.jpg"
+  },
+  "resources/images/users/user-5.jpg": {
+    "file": "assets/user-3-0557af4f.jpg",
+    "src": "resources/images/users/user-6.jpg"
+  },
+  "resources/images/users/user-6.jpg": {
+    "file": "assets/user-3-0557af4f.jpg",
+    "src": "resources/images/users/user-6.jpg"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-1dd66bf7.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-1dd66bf7.css"
+    ],
+    "file": "assets/app-d35ef43c.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/custom/chart-active.js": {
+    "file": "assets/chart-active-a0604b07.js",
+    "isEntry": true,
+    "src": "resources/js/custom/chart-active.js"
+  },
+  "resources/js/custom/store.js": {
+    "file": "assets/store-7e6bbe8d.js",
+    "isEntry": true,
+    "src": "resources/js/custom/store.js"
+  },
+  "resources/js/main.js": {
+    "file": "assets/main-5c6b3af9.js",
+    "isEntry": true,
+    "src": "resources/js/main.js"
+  },
+  "resources/js/plugins/jquery-jvectormap-2.0.5.min.js": {
+    "file": "assets/jquery-jvectormap-2.0.5.min-e44a5384.js",
+    "isEntry": true,
+    "src": "resources/js/plugins/jquery-jvectormap-2.0.5.min.js"
+  },
+  "resources/js/plugins/jquery-jvectormap-world-mill-en.js": {
+    "file": "assets/jquery-jvectormap-world-mill-en-8e18c5b8.js",
+    "isEntry": true,
+    "src": "resources/js/plugins/jquery-jvectormap-world-mill-en.js"
+  }
+}

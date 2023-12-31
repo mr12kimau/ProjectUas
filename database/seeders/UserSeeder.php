@@ -17,21 +17,21 @@ class UserSeeder extends Seeder
         $users = collect([
             [
                 'name' => 'Super Admin',
-                'email' => 'superadmin@dashcode.com',
+                'email' => 'superadmin@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt('password'),
                 'role' => 'super-admin',
             ],
             [
                 'name' => 'Admin',
-                'email' => 'admin@dashcode.com',
+                'email' => 'admin@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt('password'),
                 'role' => 'admin',
             ],
             [
                 'name' => 'User',
-                'email' => 'user@dashcode.com',
+                'email' => 'user@gmail.com',
                 'email_verified_at' => now(),
                 'password' => bcrypt('password'),
                 'role' => 'user',
