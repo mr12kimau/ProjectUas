@@ -49,6 +49,22 @@
                     </span>
                 </a>
             </li>
+            <li>
+                <a href="{{ route('product.index') }}" class="navItem {{ (\Request::route()->getName() == 'product') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="gridicons:product"></iconify-icon>
+                        <span>{{ __('Produk') }}</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('employee.index') }}" class="navItem {{ (\Request::route()->getName() == 'employee') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
+                        <span>{{ __('Employee') }}</span>
+                    </span>
+                </a>
+            </li>
             <li class="">
                 <a href="{{ route('email') }}" class="navItem {{ (\Request::route()->getName() == 'email') ? 'active' : '' }}">
                     <span class="flex items-center">

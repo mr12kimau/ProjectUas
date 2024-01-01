@@ -1,9 +1,14 @@
-@props(['breadcrumbItems' => [], 'pageTitle'=>'Default Title'])
+@props(['breadcrumbItems' => [], 'pageTitle'=>'Default Title', 'icon' => null])
 <div class="flex items-center justify-between">
     {{--Breadcrumb title start--}}
-    <h5 class="text-textColor font-Inter font-medium md:text-2xl mr-4 dark:text-white mb-1 sm:mb-0">
-        {{ __($pageTitle) }}
-    </h5>
+    @if($icon)
+        <span class="icon" style="font-size: 3.5em; vertical-align: middle;">{!! $icon !!} </span>
+    @endif
+        <h4 class="text-textColor font-Inter font-medium md:text-2xl mr-4 dark:text-white mb-1 sm:mb-0">
+            <b>{{ __($pageTitle) }}</b>
+        </h4>
+
+
 
     {{--Breadcrumb list start--}}
     <ul class="m-0 p-0 list-none">

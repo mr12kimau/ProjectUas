@@ -7,6 +7,8 @@ use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UtilityController;
@@ -30,6 +32,20 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     // Locale
     Route::get('setlocale/{locale}', SetLocaleController::class)->name('setlocale');
 
+    // Product
+    Route::resource('product', ProductController::class);
+    Route::get('/product', [ProductController::class, 'index'])->name('product.index');
+    Route::get('/product/tambah', [ProductController::class, 'create'])->name('tambah-product');
+    Route::get('/product/{product}', [ProductController::class, 'edit'])->name('product.edit');
+    Route::delete('/product/{product}', [ProductController::class, 'destroy'])->name('product.destroy');
+    
+    //employee
+    Route::resource('employee', EmployeeController::class);
+    Route::get('/employee', [EmployeeController::class, 'index'])->name('employee.index');
+    Route::get('/employee/tambah', [EmployeeController::class, 'create'])->name('tambah-employee');
+    Route::get('/employee/{employee}', [EmployeeController::class, 'edit'])->name('employee.edit');
+    Route::delete('/employee/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy');
+    
     // User
     Route::resource('users', UserController::class);
     // Permission
