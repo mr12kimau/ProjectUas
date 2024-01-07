@@ -71,6 +71,9 @@
                                 Harga
                               </th>
                               <th scope="col" class=" table-th ">
+                                Foto
+                              </th>
+                              <th scope="col" class=" table-th ">
                                 Aksi
                               </th>
                           </tr>
@@ -87,7 +90,9 @@
                                 </div>
                               </td>
                               <td class="table-td ">{{ $item['price'] }}</td>
-                              <td class="table-td ">
+                              <td class="table-td "><img src="{{Storage::url('images/produk/'.$item->foto)}}"style="width:150px" class="img-thumbnail">
+                               </td>
+                             <td class="table-td ">
                                 <div>
                                   <div class="relative">
                                     <div class="dropdown relative">

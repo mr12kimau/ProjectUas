@@ -52,8 +52,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $foto = $request->file('foto');
+        $fotoName = $foto->hashName();
+        $foto->storeAs('public/images/produk', $fotoName);
         $product = product::create([
             'name' => $request->name,
+            'foto' => $fotoName,
             'suhu' => $request->suhu,
             'category' => $request->category,
             'price' => $request->price
@@ -100,12 +104,33 @@ class ProductController extends Controller
      */
     public function update(Request $request, product $product)
     {
-        $product->update([
-            'name' => $request->name,
-            'suhu' => $request->suhu,
-            'category' => $request->category,
-            'price' => $request->price
-        ]);
+        if ($request->hasFile('foto')) {
+            // Delete the old file
+            Storage::disk('local')->delete('public/images/produk/'. $product->foto);
+        
+            // Process the new file
+            $foto = $request->file('foto');
+            $fotoName = $foto->hashName();
+            $foto->storeAs('public/images/produk', $fotoName);
+        
+            // Update product data including new file name
+            $product->update([
+                'name' => $request->name,
+                'foto' => $fotoName,
+                'suhu' => $request->suhu,
+                'category' => $request->category,
+                'price' => $request->price
+            ]);
+        } else {
+            // Update product data without changing the file
+            $product->update([
+                'name' => $request->name,
+                'suhu' => $request->suhu,
+                'category' => $request->category,
+                'price' => $request->price
+            ]);
+        }
+        
         if ($product) {
             return redirect()->route('product.index')->with('success', 'Produk berhasil di Update!');
         } else {

@@ -14,7 +14,7 @@
 
                 <div class="card-text h-full">
                     <!-- Pastikan action mengarah ke route yang benar dan tambahkan @csrf untuk keamanan -->
-                    <form class="space-y-4" action="{{ route('product.store') }}" method="POST" id="multipleValidation">
+                    <form class="space-y-4" action="{{ route('product.store') }}" method="POST" id="multipleValidation" enctype="multipart/form-data">
                         @csrf <!-- CSRF Token untuk keamanan -->
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="input-area">
@@ -47,6 +47,22 @@
                                     <input id="price" type="text" name="price" class="form-control" placeholder="Harga" required="required">
                                 </div>
                             </div>
+                            <div class="card-text h-full space-y-6">
+                                <div class="input-area">
+                                    <div class="filePreview">
+                                        <label class="form-label"> Foto
+                                            <input type="file" class=" w-full hidden" name="foto">
+                                            <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                            <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                <span id="placeholder" class="text-slate-400">Choose a file or drop it here...</span>
+                                            </span>
+                                            <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                            </span>
+                                        </label>
+                                        <div id="file-preview"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <button class="btn flex justify-center btn-dark ml-auto" type="submit">Submit</button>
                     </form>
@@ -55,3 +71,16 @@
         </div>
     </div>
 </x-app-layout>
+
+@push('scripts')
+        @vite(['resources/js/plugins/dropzone.min.js'])
+        <script type="module">
+            Dropzone.autoDiscover = false;
+            $("#myUploader").dropzone({
+                url: "/",
+                dictDefaultMessage: "",
+                addRemoveLinks: true,
+            });
+        </script>
+    @endpush
+

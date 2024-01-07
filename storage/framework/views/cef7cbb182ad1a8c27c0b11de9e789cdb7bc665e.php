@@ -36,7 +36,7 @@
 
                 <div class="card-text h-full">
                     <!-- Pastikan action mengarah ke route yang benar dan tambahkan <?php echo csrf_field(); ?> untuk keamanan -->
-                    <form class="space-y-4" action="<?php echo e(route('product.update', $product->id)); ?>" method="POST" id="multipleValidation">
+                    <form class="space-y-4" action="<?php echo e(route('product.update', $product->id)); ?>" method="POST" id="multipleValidation" enctype="multipart/form-data">
                         <?php echo csrf_field(); ?> <!-- CSRF Token untuk keamanan -->
                         <?php echo method_field('PUT'); ?> <!-- Method spoofing untuk Update -->
                         <div class="grid md:grid-cols-2 gap-6">
@@ -68,6 +68,22 @@
                                     <input id="price" type="text" name="price" class="form-control" value="<?php echo e($product->price); ?>" placeholder="Harga" required="required">
                                 </div>
                             </div>
+                            <div class="card-text h-full space-y-6">
+                                <div class="input-area">
+                                    <div class="filePreview">
+                                        <label class="form-label"> Foto
+                                            <input type="file" class=" w-full hidden" name="foto">
+                                            <span class="w-full h-[40px] file-control flex items-center custom-class">
+                                            <span class="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                                <span id="placeholder" class="text-slate-400">Choose a file or drop it here...</span>
+                                            </span>
+                                            <span class="file-name flex-none cursor-pointer border-l px-4 border-slate-200 dark:border-slate-700 h-full inline-flex items-center bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-sm rounded-tr rounded-br font-normal">Browse</span>
+                                            </span>
+                                        </label>
+                                        <div id="file-preview"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <button class="btn flex justify-center btn-dark ml-auto" type="submit">Submit</button>
                     </form>
@@ -81,4 +97,15 @@
 <?php $component = $__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da; ?>
 <?php unset($__componentOriginal8e2ce59650f81721f93fef32250174d77c3531da); ?>
 <?php endif; ?>
-<?php /**PATH D:\Project\Dashboard\resources\views/products/update.blade.php ENDPATH**/ ?>
+
+<?php $__env->startPush('scripts'); ?>
+        <?php echo app('Illuminate\Foundation\Vite')(['resources/js/plugins/dropzone.min.js']); ?>
+        <script type="module">
+            Dropzone.autoDiscover = false;
+            $("#myUploader").dropzone({
+                url: "/",
+                dictDefaultMessage: "",
+                addRemoveLinks: true,
+            });
+        </script>
+    <?php $__env->stopPush(); ?><?php /**PATH D:\Project\Dashboard\resources\views/products/update.blade.php ENDPATH**/ ?>
