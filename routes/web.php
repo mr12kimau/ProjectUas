@@ -9,6 +9,8 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UtilityController;
@@ -20,9 +22,12 @@ use App\Http\Controllers\DatabaseBackupController;
 use App\Http\Controllers\GeneralSettingController;
 
 require __DIR__ . '/auth.php';
+    
+//Menu
+Route::resource('menu', MenuController::class);
 
 Route::get('/', function () {
-    return to_route('login');
+    return to_route('menu.index');
 });
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
@@ -31,6 +36,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('dashboard-ecommerce', [HomeController::class, 'ecommerceDashboard'])->name('dashboards.ecommerce');
     // Locale
     Route::get('setlocale/{locale}', SetLocaleController::class)->name('setlocale');
+
 
     // Product
     Route::resource('product', ProductController::class);
@@ -45,9 +51,17 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/employee/tambah', [EmployeeController::class, 'create'])->name('tambah-employee');
     Route::get('/employee/{employee}', [EmployeeController::class, 'edit'])->name('employee.edit');
     Route::delete('/employee/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy');
+
+    //transaction
+    Route::resource('transaction', TransactionController::class);
+    Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction.index');
+    Route::get('/transaction/tambah', [TransactionController::class, 'create'])->name('tambah-transaction');
+    Route::get('/transaction/{transaction}', [TransactionController::class, 'edit'])->name('transaction.edit');
+    Route::delete('/transaction/{transaction}', [TransactionController::class, 'destroy'])->name('transaction.destroy');
     
     // User
     Route::resource('users', UserController::class);
+    Route::get('/user', [UserController::class, 'index'])->name('user.index');
     // Permission
     Route::resource('permissions', PermissionController::class)->except(['show']);
     // Roles

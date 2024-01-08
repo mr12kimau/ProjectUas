@@ -20,26 +20,14 @@
       opacity-0"></div>
     <div class="sidebar-menus bg-white dark:bg-slate-800 py-2 px-4 h-[calc(100%-80px)] z-50" id="sidebar_menus">
         <ul class="sidebar-menu">
-            <li class="sidebar-menu-title">{{ __('MENU') }}</li>
-            <li class="{{ (\Request::route()->getName() == 'dashboards*') ? 'active' : '' }}">
-                <a href="#" class="navItem">
-                    <span class="flex items-center">
-                        <iconify-icon class=" nav-icon" icon="heroicons-outline:home"></iconify-icon>
-                        <span>{{ __('Dashboard') }}</span>
-                    </span>
-                    <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
-                </a>
-                <ul class="sidebar-submenu">
-                    <li>
-                        <a href="{{ route('dashboards.analytic') }}" class="navItem {{ (\Request::route()->getName() == 'dashboards.analytic') ? 'active' : '' }}">{{ __('Analytical Dashboard') }}</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('dashboards.ecommerce') }}" class="navItem {{ (\Request::route()->getName() == 'dashboards.ecommerce') ? 'active' : '' }}">{{ __('Ecommerce Dashboard') }}
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <!-- Apps Area -->
+            
+            @if(auth()->check())
+        @php
+            $userRoles = auth()->user()->getRoleNames(); // Retrieve the names of the roles
+        @endphp
+
+        @if($userRoles->contains('super-admin'))
+                     <!-- Apps Area -->
             <li class="sidebar-menu-title">{{ __('APPS') }}</li>
             <li>
                 <a href="{{ route('chat') }}" class="navItem {{ (\Request::route()->getName() == 'chat') ? 'active' : '' }}">
@@ -50,21 +38,22 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('product.index') }}" class="navItem {{ (\Request::route()->getName() == 'product') ? 'active' : '' }}">
-                    <span class="flex items-center">
-                        <iconify-icon class="nav-icon" icon="gridicons:product"></iconify-icon>
-                        <span>{{ __('Produk') }}</span>
-                    </span>
-                </a>
-            </li>
+                    <a href="{{ route('transaction.index') }}" class="navItem {{ (\Request::route()->getName() == 'transaction') ? 'active' : '' }}">
+                        <span class="flex items-center">
+                            <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
+                            <span>{{ __('Kasir') }}</span>
+                        </span>
+                    </a>
+                </li>
             <li>
-                <a href="{{ route('employee.index') }}" class="navItem {{ (\Request::route()->getName() == 'employee') ? 'active' : '' }}">
+                <a href="{{ route('users.index') }}" class="navItem {{ (\Request::route()->getName() == 'user') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
-                        <span>{{ __('Employee') }}</span>
+                        <span>{{ __('Akun') }}</span>
                     </span>
                 </a>
             </li>
+
             <li class="">
                 <a href="{{ route('email') }}" class="navItem {{ (\Request::route()->getName() == 'email') ? 'active' : '' }}">
                     <span class="flex items-center">
@@ -114,8 +103,8 @@
                     </li>
                 </ul>
             </li>
-            <!-- Pages Area -->
-            <li class="sidebar-menu-title">{{ __('PAGES') }}</li>
+             <!-- Pages Area -->
+             <li class="sidebar-menu-title">{{ __('PAGES') }}</li>
             <!-- Utility -->
             <li class="{{ (\Request::route()->getName() == 'utility*') ? 'active' : '' }}">
                 <a href="javascript:void(0)" class="navItem">
@@ -375,6 +364,131 @@
                     Upgrade
                 </button>
             </div>
+        @elseif($userRoles->contains('admin'))
+        <li class="sidebar-menu-title">{{ __('MENU') }}</li>
+            <li class="{{ (\Request::route()->getName() == 'dashboards*') ? 'active' : '' }}">
+                <a href="#" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:home"></iconify-icon>
+                        <span>{{ __('Dashboard') }}</span>
+                    </span>
+                    <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                    <li>
+                        <a href="{{ route('dashboards.analytic') }}" class="navItem {{ (\Request::route()->getName() == 'dashboards.analytic') ? 'active' : '' }}">{{ __('Analytical Dashboard') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('dashboards.ecommerce') }}" class="navItem {{ (\Request::route()->getName() == 'dashboards.ecommerce') ? 'active' : '' }}">{{ __('Ecommerce Dashboard') }}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+                     <!-- Apps Area -->
+            <li class="sidebar-menu-title">{{ __('APPS') }}</li>
+            <li>
+                <a href="{{ route('chat') }}" class="navItem {{ (\Request::route()->getName() == 'chat') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="heroicons-outline:chat"></iconify-icon>
+                        <span>{{ __('Chat') }}</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('users.index') }}" class="navItem {{ (\Request::route()->getName() == 'user') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
+                        <span>{{ __('Akun') }}</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('employee.index') }}" class="navItem {{ (\Request::route()->getName() == 'employee') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
+                        <span>{{ __('Employee') }}</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('product.index') }}" class="navItem {{ (\Request::route()->getName() == 'product') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="gridicons:product"></iconify-icon>
+                        <span>{{ __('Produk') }}</span>
+                    </span>
+                </a>
+            </li>
+            <li class="">
+                <a href="{{ route('email') }}" class="navItem {{ (\Request::route()->getName() == 'email') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:mail"></iconify-icon>
+                        <span>{{ __('Email') }}</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('kanban') }}" class="navItem {{ (\Request::route()->getName() == 'kanban') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:view-boards"></iconify-icon>
+                        <span>{{ __('Kanban') }}</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('calender') }}" class="navItem {{ (\Request::route()->getName() == 'calender') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:calendar"></iconify-icon>
+                        <span>{{ __('Calander') }}</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('todo') }}" class="navItem {{ (\Request::route()->getName() == 'todo') ? 'active' : '' }}">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:clipboard-check"></iconify-icon>
+                        <span>{{ __('Todo') }}</span>
+                    </span>
+                </a>
+            </li>
+            <li class="{{ (\Request::route()->getName() == 'project*') ? 'active' : '' }}">
+                <a href="javascript:void(0)" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:document"></iconify-icon>
+                        <span>{{ __('Projects') }}</span>
+                    </span>
+                    <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                    <li>
+                        <a href="{{ route('project') }}" class="{{ (\Request::route()->getName() == 'project') ? 'active' : '' }}">{{ __('Projects') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('project-details') }}" class="{{ (\Request::route()->getName() == 'projectDetails') ? 'active' : '' }}">{{ __('Project Details') }}</a>
+                    </li>
+                </ul>
+            </li>
+        @elseif($userRoles->contains('user'))
+        <!-- Apps Area -->
+        <li class="sidebar-menu-title">{{ __('APPS') }}</li>
+                <li>
+                    <a href="{{ route('employee.index') }}" class="navItem {{ (\Request::route()->getName() == 'employee') ? 'active' : '' }}">
+                        <span class="flex items-center">
+                            <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
+                            <span>{{ __('Karyawan') }}</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('product.index') }}" class="navItem {{ (\Request::route()->getName() == 'product') ? 'active' : '' }}">
+                        <span class="flex items-center">
+                            <iconify-icon class="nav-icon" icon="gridicons:product"></iconify-icon>
+                            <span>{{ __('Produk') }}</span>
+                        </span>
+                    </a>
+                </li>
+            </li>
+        @endif
+    @endif
         </div>
         <!-- Upgrade Your Business Plan Card Start -->
     </div>

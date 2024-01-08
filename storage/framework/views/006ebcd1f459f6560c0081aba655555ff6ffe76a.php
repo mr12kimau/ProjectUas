@@ -34,27 +34,14 @@
       opacity-0"></div>
     <div class="sidebar-menus bg-white dark:bg-slate-800 py-2 px-4 h-[calc(100%-80px)] z-50" id="sidebar_menus">
         <ul class="sidebar-menu">
-            <li class="sidebar-menu-title"><?php echo e(__('MENU')); ?></li>
-            <li class="<?php echo e((\Request::route()->getName() == 'dashboards*') ? 'active' : ''); ?>">
-                <a href="#" class="navItem">
-                    <span class="flex items-center">
-                        <iconify-icon class=" nav-icon" icon="heroicons-outline:home"></iconify-icon>
-                        <span><?php echo e(__('Dashboard')); ?></span>
-                    </span>
-                    <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
-                </a>
-                <ul class="sidebar-submenu">
-                    <li>
-                        <a href="<?php echo e(route('dashboards.analytic')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'dashboards.analytic') ? 'active' : ''); ?>"><?php echo e(__('Analytical Dashboard')); ?></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo e(route('dashboards.ecommerce')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'dashboards.ecommerce') ? 'active' : ''); ?>"><?php echo e(__('Ecommerce Dashboard')); ?>
+            
+            <?php if(auth()->check()): ?>
+        <?php
+            $userRoles = auth()->user()->getRoleNames(); // Retrieve the names of the roles
+        ?>
 
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <!-- Apps Area -->
+        <?php if($userRoles->contains('super-admin')): ?>
+                     <!-- Apps Area -->
             <li class="sidebar-menu-title"><?php echo e(__('APPS')); ?></li>
             <li>
                 <a href="<?php echo e(route('chat')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'chat') ? 'active' : ''); ?>">
@@ -65,21 +52,22 @@
                 </a>
             </li>
             <li>
-                <a href="<?php echo e(route('product.index')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'product') ? 'active' : ''); ?>">
-                    <span class="flex items-center">
-                        <iconify-icon class="nav-icon" icon="gridicons:product"></iconify-icon>
-                        <span><?php echo e(__('Produk')); ?></span>
-                    </span>
-                </a>
-            </li>
+                    <a href="<?php echo e(route('transaction.index')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'transaction') ? 'active' : ''); ?>">
+                        <span class="flex items-center">
+                            <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
+                            <span><?php echo e(__('Kasir')); ?></span>
+                        </span>
+                    </a>
+                </li>
             <li>
-                <a href="<?php echo e(route('employee.index')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'employee') ? 'active' : ''); ?>">
+                <a href="<?php echo e(route('users.index')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'user') ? 'active' : ''); ?>">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
-                        <span><?php echo e(__('Employee')); ?></span>
+                        <span><?php echo e(__('Akun')); ?></span>
                     </span>
                 </a>
             </li>
+
             <li class="">
                 <a href="<?php echo e(route('email')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'email') ? 'active' : ''); ?>">
                     <span class="flex items-center">
@@ -129,8 +117,8 @@
                     </li>
                 </ul>
             </li>
-            <!-- Pages Area -->
-            <li class="sidebar-menu-title"><?php echo e(__('PAGES')); ?></li>
+             <!-- Pages Area -->
+             <li class="sidebar-menu-title"><?php echo e(__('PAGES')); ?></li>
             <!-- Utility -->
             <li class="<?php echo e((\Request::route()->getName() == 'utility*') ? 'active' : ''); ?>">
                 <a href="javascript:void(0)" class="navItem">
@@ -390,6 +378,132 @@
                     Upgrade
                 </button>
             </div>
+        <?php elseif($userRoles->contains('admin')): ?>
+        <li class="sidebar-menu-title"><?php echo e(__('MENU')); ?></li>
+            <li class="<?php echo e((\Request::route()->getName() == 'dashboards*') ? 'active' : ''); ?>">
+                <a href="#" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:home"></iconify-icon>
+                        <span><?php echo e(__('Dashboard')); ?></span>
+                    </span>
+                    <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                    <li>
+                        <a href="<?php echo e(route('dashboards.analytic')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'dashboards.analytic') ? 'active' : ''); ?>"><?php echo e(__('Analytical Dashboard')); ?></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(route('dashboards.ecommerce')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'dashboards.ecommerce') ? 'active' : ''); ?>"><?php echo e(__('Ecommerce Dashboard')); ?>
+
+                        </a>
+                    </li>
+                </ul>
+            </li>
+                     <!-- Apps Area -->
+            <li class="sidebar-menu-title"><?php echo e(__('APPS')); ?></li>
+            <li>
+                <a href="<?php echo e(route('chat')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'chat') ? 'active' : ''); ?>">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="heroicons-outline:chat"></iconify-icon>
+                        <span><?php echo e(__('Chat')); ?></span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo e(route('users.index')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'user') ? 'active' : ''); ?>">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
+                        <span><?php echo e(__('Akun')); ?></span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo e(route('employee.index')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'employee') ? 'active' : ''); ?>">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
+                        <span><?php echo e(__('Employee')); ?></span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo e(route('product.index')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'product') ? 'active' : ''); ?>">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="gridicons:product"></iconify-icon>
+                        <span><?php echo e(__('Produk')); ?></span>
+                    </span>
+                </a>
+            </li>
+            <li class="">
+                <a href="<?php echo e(route('email')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'email') ? 'active' : ''); ?>">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:mail"></iconify-icon>
+                        <span><?php echo e(__('Email')); ?></span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo e(route('kanban')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'kanban') ? 'active' : ''); ?>">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:view-boards"></iconify-icon>
+                        <span><?php echo e(__('Kanban')); ?></span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo e(route('calender')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'calender') ? 'active' : ''); ?>">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:calendar"></iconify-icon>
+                        <span><?php echo e(__('Calander')); ?></span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo e(route('todo')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'todo') ? 'active' : ''); ?>">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:clipboard-check"></iconify-icon>
+                        <span><?php echo e(__('Todo')); ?></span>
+                    </span>
+                </a>
+            </li>
+            <li class="<?php echo e((\Request::route()->getName() == 'project*') ? 'active' : ''); ?>">
+                <a href="javascript:void(0)" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class=" nav-icon" icon="heroicons-outline:document"></iconify-icon>
+                        <span><?php echo e(__('Projects')); ?></span>
+                    </span>
+                    <iconify-icon class="icon-arrow" icon="heroicons-outline:chevron-right"></iconify-icon>
+                </a>
+                <ul class="sidebar-submenu">
+                    <li>
+                        <a href="<?php echo e(route('project')); ?>" class="<?php echo e((\Request::route()->getName() == 'project') ? 'active' : ''); ?>"><?php echo e(__('Projects')); ?></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo e(route('project-details')); ?>" class="<?php echo e((\Request::route()->getName() == 'projectDetails') ? 'active' : ''); ?>"><?php echo e(__('Project Details')); ?></a>
+                    </li>
+                </ul>
+            </li>
+        <?php elseif($userRoles->contains('user')): ?>
+        <!-- Apps Area -->
+        <li class="sidebar-menu-title"><?php echo e(__('APPS')); ?></li>
+                <li>
+                    <a href="<?php echo e(route('employee.index')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'employee') ? 'active' : ''); ?>">
+                        <span class="flex items-center">
+                            <iconify-icon class="nav-icon" icon="clarity:employee-line"></iconify-icon>
+                            <span><?php echo e(__('Karyawan')); ?></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo e(route('product.index')); ?>" class="navItem <?php echo e((\Request::route()->getName() == 'product') ? 'active' : ''); ?>">
+                        <span class="flex items-center">
+                            <iconify-icon class="nav-icon" icon="gridicons:product"></iconify-icon>
+                            <span><?php echo e(__('Produk')); ?></span>
+                        </span>
+                    </a>
+                </li>
+            </li>
+        <?php endif; ?>
+    <?php endif; ?>
         </div>
         <!-- Upgrade Your Business Plan Card Start -->
     </div>
